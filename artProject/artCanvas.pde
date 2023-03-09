@@ -1,33 +1,28 @@
   String testVar1 = "Hello World";
+  int centerX = 400;
+  int centerY = 400;
 
   void setup(){
     size(800, 800);
-  
-    ellipse(200, 200, 100, 100);
-    square(300, 300, 50);
-  
-    fill(0);
-    strokeWeight(5);
-    textSize(15);
-    text(testVar1, 165, 200);
-    
+    System.out.println(testVar1);   
   }
  
   void draw(){
-    //myMethods my = new myMethods();
-    
-    //System.out.print("Mouse X is: ");
-    //System.out.println(my.findMouseX());
-    
+    background(220);
     Organizer org = new Organizer();
-    
-    System.out.println(org.findSecret());
-    
-    fill(0);
-    textSize(100);
-    text(org.findSecret(), 300, 400);
+    myMethods my = new myMethods();
+    myColors myColor = new myColors();
+   
+   
+    push();
+    translate(centerX, centerY);    // make the center of the circle 0, 0
     noFill();
-    
-    
-    delay(1000);
+    my.drawCircles(0, 0, 200);
+    // my.fractal();
+    pop();
+  }
+  
+  void mouseDragged(){
+    centerX = mouseX;
+    centerY = mouseY;
   }
