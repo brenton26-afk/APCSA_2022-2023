@@ -25,16 +25,16 @@ class myMethods{
     }
   }
   
-  void fractal(int xPos, int yPos, int size){
-    int Y = yPos - size/2;
-    int X1 = xPos;
-    int Y1 = Y;
-    int X2 = xPos - (size / 2);
+  void fractal(float xPos, float yPos, float size){
+    float Y = yPos - size/2;
+    float X1 = xPos;
+    float Y1 = Y;
+    float X2 = xPos - (size / 2);
     float f2 = Y + (size/2) * sqrt(3);
-    int Y2 = (int) f2;
-    int X3 = xPos + size /2;
+    // float Y2 = (int) f2;
+    float X3 = xPos + size /2;
     float f3 = Y + (size/2) * sqrt(3);
-    int Y3 = (int) f3;
+    // float Y3 = (int) f3;
     
     
     // midpoint formula: ((x1 + x2) / 2), ((y1 + y2) / 2)
@@ -47,5 +47,9 @@ class myMethods{
       fractal((X1+X2)/2, (Y1 + Y2)/2, size/2);
     }
   }
+  
+  void betterFractal(float xPos, float yPos, float hyp){
+   // fill code
+   }
   
 }
