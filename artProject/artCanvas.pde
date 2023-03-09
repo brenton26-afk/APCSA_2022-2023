@@ -17,12 +17,15 @@
     push();
     translate(centerX, centerY);    // make the center of the circle 0, 0
     noFill();
-    my.drawCircles(0, 0, 200);
-    // my.fractal();
+    //circle(0, 0, 10);
+    // my.drawCircles(0, 0, 200);
+    my.fractal(0, 0, 200);
     pop();
   }
   
   void mouseDragged(){
-    centerX = mouseX;
-    centerY = mouseY;
+    System.out.println("X: " + mouseX);
+    System.out.println("Y: " + mouseY);
+    //centerX = mouseX;
+    //centerY = mouseY;
   }
