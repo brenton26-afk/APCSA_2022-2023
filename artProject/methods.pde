@@ -26,30 +26,39 @@ class myMethods{
   }
   
   void fractal(float xPos, float yPos, float size){
-    float Y = yPos - size/2;
-    float X1 = xPos;
-    float Y1 = Y;
-    float X2 = xPos - (size / 2);
-    float f2 = Y + (size/2) * sqrt(3);
-    // float Y2 = (int) f2;
-    float X3 = xPos + size /2;
-    float f3 = Y + (size/2) * sqrt(3);
-    // float Y3 = (int) f3;
-    
+    float y1 = yPos - (size * sqrt(3))/2;
+    float x1 = xPos;
+    float y2 = (size * sqrt(3))/2 + yPos;
+    float x2 = xPos - size;
+    float y3 = y2;
+    float x3 = xPos + size;
     
     // midpoint formula: ((x1 + x2) / 2), ((y1 + y2) / 2)
-    //circle(xPos, yPos, 10);
-    
-    triangle(X, Y1, X2, Y2, X3, Y3);
+    triangle(x1, y1, x2, y2, x3, y3);
+   
     int minSize = 10;
-    if(size >= minSize){
-      // triangle one
-      fractal((X1+X2)/2, (Y1 + Y2)/2, size/2);
+    if(size >= minSize){  
+      //stroke(color(255, 0, 0));
+      fractal((x1 + x2)/2, (y1 + y2)/2, size * .4);
+      fractal((x1 + x3)/2, (y1 + y3)/2, size * .4);
+      fractal((x2 + x3)/2, (y2 + y3)/2, size * .4);
+      //corner triangles
+      fractal(x1, y1, size * .4);
+      fractal(x2, y2, size * .4);
+      fractal(x3, y3, size * .4);
     }
+    
   }
   
-  void betterFractal(float xPos, float yPos, float hyp){
-   // fill code
+  void betterFractal(float xPos, float yPos, float size){
+    float y1 = yPos - (size * sqrt(3))/2;
+    float x1 = xPos;
+    float y2 = (size * sqrt(3))/2 + yPos;
+    float x2 = xPos - size;
+    float y3 = y2;
+    float x3 = xPos + size;
+    
+    triangle(x1, y1, x2, y2, x3, y3);
    }
   
 }
