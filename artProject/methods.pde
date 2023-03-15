@@ -65,6 +65,7 @@ class myMethods{
     float x3 = x1 + size/2;
     
     // midpoint formula: ((x1 + x2) / 2), ((y1 + y2) / 2)
+    fill(random(0, 255), random(0, 255), random(0, 255));     // fill with random colors :)
     triangle(x1, y1, x2, y2, x3, y3);
     //circle((x1+x2+x3)/3, (y1+y2+y3)/3, 10);      //center of triangle
    
