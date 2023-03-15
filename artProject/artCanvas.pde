@@ -10,10 +10,12 @@ void setup() {
   background(220);
 }
 
+///////////////////////////////////////////////////////////////
+/*    Variable yard   */
 int centerX = 500;
 int centerY = 500;
-
 float start = 0;
+///////////////////////////////////////////////////////////////
 
 void draw() {
   myMethods my = new myMethods();
