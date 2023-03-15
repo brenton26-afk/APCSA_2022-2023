@@ -9,6 +9,7 @@
 
   int centerX = 500;
   int centerY = 500;
+  
   void draw(){
     background(220);
     Organizer org = new Organizer();
@@ -18,7 +19,7 @@
     push();
     translate(centerX, centerY);    // make the center of the circle 0, 0
     noFill();
-    my.fractal(0, 0, 500, "tri");
+    my.betterFractal(0, 0, 500);
     pop();
   }
   
