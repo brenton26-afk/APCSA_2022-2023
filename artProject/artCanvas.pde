@@ -7,28 +7,34 @@ void setup() {
   size(1000, 1000);
   System.out.println(testVar1);
   //System.out.println("size: " + 200 * sqrt(3));
-  background(220);
+  
+  /*  when drawing spiralTriangle  */
+  /*  remove the code from the draw function or comment it out  */
+  myMethods my = new myMethods();
+  translate(centerX, centerY);
+  noFill();
+  my.spiralTriangle(0, 0, 100);
+  
 }
 
-///////////////////////////////////////////////////////////////
-/*    Variable yard   */
 int centerX = 500;
 int centerY = 500;
-float start = 0;
-///////////////////////////////////////////////////////////////
 
-void draw() {
-  myMethods my = new myMethods();
-  //myColors myColor = new myColors();
-  push();
-  translate(centerX, centerY);    // make the center of the circle 0, 0
-  noFill();
-  if (millis() - start >= 1000) {
-    my.betterFractal(0, 0, 500);
-    start = millis();
-  }
-  pop();
-}
+float start = 0;
+
+//void draw() {
+//  //code
+//  myMethods my = new myMethods();
+//  //myColors myColor = new myColors();
+  
+//  translate(centerX, centerY);    // make the center of the circle 0, 0
+//  noFill();
+//  if (millis() - start >= 1000) {
+//    background(220);    //resets the canvas so that the previous fractal is gone
+//    my.spiralTriangle(0, 0, 100);
+//    start = millis();
+//  }
+//}
 
 void mouseDragged() {
   //System.out.println("X: " + mouseX);
