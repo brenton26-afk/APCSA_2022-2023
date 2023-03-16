@@ -63,7 +63,7 @@ class myMethods {
     stroke(random(0, 255), random(0, 255), random(0, 255));
     triangle(x1, y1, x2, y2, x3, y3);
     //circle((x1+x2+x3)/3, (y1+y2+y3)/3, 10);      //center of triangle
-    float small = 0.2;
+    float small = 0.35;
     int minSize = 10;
     if (size >= minSize) {
       betterFractal((x1 + x2)/2, (y1 + y2)/2, size * small);
@@ -75,4 +75,31 @@ class myMethods {
       betterFractal(x3, y3, size * small);
     }
   }
+ 
+
+    float ang = 0;
+  void spiralTriangle(float xPos, float yPos, float size){
+    /*    This will create a triangle just like the other functions it will turn it into a spiral.    */
+    float y1 = yPos - (((size * sqrt(3))/2)/3)*2;
+    float x1 = xPos;
+    float y2 = yPos + ((size * sqrt(3))/2)/3;
+    float x2 = x1 - size/2;
+    float y3 = y2;
+    float x3 = x1 + size/2;
+
+    // midpoint formula: ((x1 + x2) / 2), ((y1 + y2) / 2)
+    fill(random(0, 255), random(0, 255), random(0, 255));     // fill with random colors :)
+    //strokeWeight(2);
+    stroke(random(0, 255), random(0, 255), random(0, 255));
+    triangle(x1, y1, x2, y2, x3, y3);
+    //circle((x1+x2+x3)/3, (y1+y2+y3)/3, 10);      //center of triangle
+    float small = 0.9;
+    int minSize = 10;
+    if (size >= minSize) {
+      ang = ang + (0.111111 * PI/2);
+      rotateY(ang);
+      spiralTriangle(x1, y1, size * small);
+    }
+  }
+  
 }
