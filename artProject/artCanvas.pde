@@ -1,12 +1,16 @@
 /*        Brenton Overfield        */
 ////////////////////////////////////////////////////////////////////////
-
+/*    Variable Yard:    */
+/////////////////////////////////////////////
 String testVar1 = "Hello World";
+int centerX = 500;
+int centerY = 500;
+float start = 0;
+/////////////////////////////////////////////
 
 void setup() {
   size(1500, 1500);
   System.out.println(testVar1);
-  //System.out.println("size: " + 200 * sqrt(3));
   
   /*  when drawing spiralTriangle  */
   /*  remove the code from the draw function or comment it out  */
@@ -16,11 +20,6 @@ void setup() {
   //my.spiralTriangle(-300, 100, 100);
   
 }
-
-int centerX = 500;
-int centerY = 500;
-
-float start = 0;
 
 void draw() {
   //code
