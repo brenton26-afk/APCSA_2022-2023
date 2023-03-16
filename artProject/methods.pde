@@ -1,10 +1,11 @@
 
 class myMethods {
 
-/*    Variable yard    */
+/*    Variable Yard:    */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
   private String secretName = "Secret";      // to test any classes that extend this one
   int minRadius = 2;
+  float ang = 0;    // possible variable to create a clean rotation
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*    Circle fractal    */
@@ -76,8 +77,6 @@ class myMethods {
     }
   }
  
-
-    float ang = 0;
   void spiralTriangle(float xPos, float yPos, float size){
     /*    This will create a triangle just like the other functions it will turn it into a spiral.    */
     /*    https://craftofcoding.wordpress.com/tag/processing/    */
