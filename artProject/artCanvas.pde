@@ -4,13 +4,13 @@
 /*    Variable Yard:    */
 /////////////////////////////////////////////
 String testVar1 = "Hello World";
-int centerX = 500;
-int centerY = 500;
+int centerX = 1000;
+int centerY = 1000;
 float start = 0;
 /////////////////////////////////////////////
 
 void setup() {
-  size(1500, 1500);
+  size(1000, 1000);
   System.out.println(testVar1);
   
   /*  when drawing spiralTriangle  */
@@ -27,13 +27,16 @@ void draw() {
   myMethods my = new myMethods();
   //myColors myColor = new myColors();
   
-  translate(centerX, centerY);    // make the center of the circle 0, 0
+  translate(centerX/2, centerY/2);    // make the center of the circle 0, 0
+  //circle(0, 0, 10);
   noFill();
   if (millis() - start >= 250) {
-    background(220);    //resets the canvas so that the previous fractal is gone
+    background(random(0, 255), random(0, 255), random(0, 255));    //resets the canvas so that the previous fractal is gone
     /*  When running spiralTriangle make the small variable in the function to .35 or .4 to make it neat    */
-    my.spiralTriangle(-300, 200, 100);      // work on making the spiral more tight
-    //my.betterFractal(0, 0, 500);
+    push();
+    my.spiralTriangle(0, 300, 15);      // work on making the spiral more tight
+    pop();
+    my.betterFractal(0, 0, 250);
     start = millis();
   }
 }
