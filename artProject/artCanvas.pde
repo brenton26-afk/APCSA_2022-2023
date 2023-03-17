@@ -4,13 +4,13 @@
 /*    Variable Yard:    */
 /////////////////////////////////////////////
 String testVar1 = "Hello World";
-int centerX = 1000;
-int centerY = 1000;
+int centerX = 1200;
+int centerY = 1200;
 float start = 0;
 /////////////////////////////////////////////
 
 void setup() {
-  size(1000, 1000);
+  size(1200, 1200);
   System.out.println(testVar1);
 
   /*  when drawing spiralTriangle  */
