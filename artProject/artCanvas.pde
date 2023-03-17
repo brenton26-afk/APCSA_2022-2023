@@ -12,21 +12,20 @@ float start = 0;
 void setup() {
   size(1000, 1000);
   System.out.println(testVar1);
-  
+
   /*  when drawing spiralTriangle  */
   /*  remove the code from the draw function or comment it out  */
   //myMethods my = new myMethods();
   //translate(centerX, centerY);
   //noFill();
   //my.spiralTriangle(-300, 100, 100);
-  
 }
 
 void draw() {
   //code
   myMethods my = new myMethods();
   //myColors myColor = new myColors();
-  
+
   translate(centerX/2, centerY/2);    // make the center of the circle 0, 0
   //circle(0, 0, 10);
   noFill();
