@@ -6,6 +6,8 @@ class myMethods {
   private String secretName = "Secret";      // to test any classes that extend this one
   int minRadius = 2;
   float ang = 0;    // possible variable to create a clean rotation
+  int spi = 0;
+  int tri = 0;
   /////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /*    Circle fractal    */
@@ -51,6 +53,11 @@ class myMethods {
   }
 
   void betterFractal(float xPos, float yPos, float size) {
+    if(test == true){
+      tri = tri + 1;
+      saveFrame("Striangle" + tri + ".png");
+    }
+    //println(test);
     float y1 = yPos - (((size * sqrt(3))/2)/3)*2;
     float x1 = xPos;
     float y2 = yPos + ((size * sqrt(3))/2)/3;
@@ -79,7 +86,9 @@ class myMethods {
 
   void spiralTriangle(float xPos, float yPos, float size) {
     /*    This will create a triangle just like the other functions it will turn it into a spiral.    */
-
+    spi = spi + 1;
+    saveFrame("spiral" + spi + ".png");
+    
     float y1 = yPos - (((size * sqrt(3))/2)/3)*2;
     float x1 = xPos;
     float y2 = yPos + ((size * sqrt(3))/2)/3;
@@ -94,10 +103,10 @@ class myMethods {
     //circle(xPos, yPos, 20);
     //circle((x1+x2+x3)/3, (y1+y2+y3)/3, 10);      //center of triangle
 
-    ang = ang + (0.05555 * PI/6);
+    ang = ang + (0.05555 * PI/4);
 
     float small = 1.1;
-    int minSize = 300;
+    int minSize = 600;
     if (size <= minSize) {
 
       betterFractal((x1 + x2)/2, (y1 + y2)/2, size * small);
@@ -108,7 +117,7 @@ class myMethods {
       betterFractal(x3, y3, size * small);
 
       //rotate(ang);
-      rotate(0.555 * PI/4);
+      rotate(0.5555 * PI/4);
       float X = x1 - 25;
       float Y = y1 + 5;
       spiralTriangle(X, Y, size * small);
