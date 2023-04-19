@@ -3,7 +3,7 @@ public class UnderDog extends Dog {
   
   //Override methods
   public void calc(int n){
-    2 += n;
+    n += 2;
     super.calc(n);
     System.out.print(n);
   }
